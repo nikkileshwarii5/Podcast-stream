@@ -1,7 +1,7 @@
 import axios from 'axios';
 import jwt_decode from 'jwt-decode';
-//https://podstream.onrender.com/api
-// const API = axios.create({ baseURL: 'https://podcast.io.com/api' });
+//https://podcast-stream.onrender.com/api
+
 const API = axios.create({ baseURL: `https://podcast-stream.onrender.com/api` }); 
 
 //auth
