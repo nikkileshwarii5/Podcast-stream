@@ -2,7 +2,7 @@ import axios from 'axios';
 import jwt_decode from 'jwt-decode';
 //https://podcast-stream.onrender.com/api
 
-const API = axios.create({ baseURL: `https://podcast-stream.onrender.com/api` }); 
+const API = axios.create({ baseURL: `https://podcast-stream.onrender.com`,withCredentials: true }); 
 
 //auth
 export const signIn = async ({ email, password }) => await API.post('/auth/signin', { email, password });
