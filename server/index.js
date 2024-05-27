@@ -23,11 +23,21 @@ const corsConfig = {
 app.use(cors(corsConfig));
 // app.use(morgan('tiny'));
 // app.disable('x-powered-by');
-app.use(function (request, response, next) {
-    response.header("Access-Control-Allow-Origin", "*");
-    response.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+// app.use(function (request, response, next) {
+//     response.header("Access-Control-Allow-Origin", "*");
+//     response.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+//     next();
+//   });
+
+//cors adjustment//
+app.use((req, res, next) => {
+    res.header("Access-Control-Allow-Origin", "https://gorgeous-baklava-ba8e11.netlify.app");
+    res.header("Access-Control-Allow-Credentials", "true");
+    res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE");
+    res.header("Access-Control-Allow-Headers", "Content-Type, Authorization");
     next();
-  });
+});
+
 
 const port = process.env.PORT || 8700;
 
