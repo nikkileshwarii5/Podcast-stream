@@ -17,7 +17,7 @@ const app = express();
 app.use(express.json());
 const corsConfig = {
     credentials: true,
-     origin: process.env.REACT_APP_FRONTEND_URL || 'http://localhost:3000',
+     origin: process.env.REACT_APP_FRONTEND_URL || 'https://gorgeous-baklava-ba8e11.netlify.app',
     // origin: 'http://localhost:3000'
 };
 app.use(cors(corsConfig));
