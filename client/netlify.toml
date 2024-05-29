@@ -1,5 +1,5 @@
 [[redirects]]
   # Proxy requests starting with /api/auth/ to the corresponding endpoint on your backend server
-  from = "/api/auth/*"
-  to = "https://podcast-stream.onrender.com/api/auth/:splat"
+  from = "/*"
+  to = "/index.html"
   status = 200
