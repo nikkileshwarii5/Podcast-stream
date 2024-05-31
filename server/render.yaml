@@ -4,4 +4,4 @@ services:
     directory: server
     routes:
       - src: /api/*
-        dest: https://podcast-stream.onrender.com/api
+        dest: https://podcast-stream.onrender.com
