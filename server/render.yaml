@@ -1,0 +1,7 @@
+services:
+  - name: backend
+    buildCommand: npm run build
+    directory: server
+    routes:
+      - src: /api/*
+        dest: https://podcast-stream.onrender.com/api
